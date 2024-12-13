@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="7" tests="34" time="5.653">
+ <testsuite name="Profile API" timestamp="2024-12-13T12:29:35" hostname="localhost" time="0.167" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ </testsuite>
+ <testsuite name="Profile API.GET /api/users/profile" timestamp="2024-12-13T12:29:36" hostname="localhost" time="0.106" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Profile API.GET /api/users/profile" name="[REQ029]_fetch_user_profile_successfully" time="0.078" />
+  <testcase classname="Profile API.GET /api/users/profile" name="[REQ030]_fetch_profile_with_invalid_token" time="0.027" />
+ </testsuite>
+ <testsuite name="authenticateUser Middleware" timestamp="2024-12-13T12:29:36" hostname="localhost" time="0.108" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="authenticateUser Middleware" name="[REQ022]_should_call_next_if_token_is_valid_and_user_exists" time="0.06" />
+  <testcase classname="authenticateUser Middleware" name="[REQ021]_should_return_401_if_invalid_token" time="0.036" />
+  <testcase classname="authenticateUser Middleware" name="[REQ020]_should_return_401_if_no_authorization_header" time="0.01" />
+ </testsuite>
+ <testsuite name="User API" timestamp="2024-12-13T12:29:36" hostname="localhost" time="0.374" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ </testsuite>
+ <testsuite name="User API.POST /api/users/register" timestamp="2024-12-13T12:29:36" hostname="localhost" time="0.374" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="User API.POST /api/users/register" name="[REQ005]_not_register_a_user_with_an_existing_username" time="0.06" />
+  <testcase classname="User API.POST /api/users/register" name="[REQ004]_not_register_a_user_with_an_existing_email" time="0.032" />
+  <testcase classname="User API.POST /api/users/register" name="[REQ003]_register_new_user_successfully" time="0.281" />
+ </testsuite>
+ <testsuite name="Profile Photo Update and Delete API" timestamp="2024-12-13T12:29:36" hostname="localhost" time="0.059" errors="0" tests="2" skipped="0" disabled="0" failures="7">
+  <testcase classname="Profile Photo Update and Delete API" name="[REQ062]_update_profile_photo_successfully" time="0.026">
+   <failure type="toBe" message="Expected 404 to be 200."><![CDATA[at <Jasmine>
+    at UserContext.eval (/home/projects/qatdavbt--run/backend/spec/profilePhotoSpec.js:32:33)]]>
+   </failure>
+   <failure type="toBe" message="Expected undefined to be true."><![CDATA[at <Jasmine>
+    at UserContext.eval (/home/projects/qatdavbt--run/backend/spec/profilePhotoSpec.js:33:39)]]>
+   </failure>
+   <failure type="toBe" message="Expected undefined to be &apos;Profile photo updated successfully&apos;."><![CDATA[at <Jasmine>
+    at UserContext.eval (/home/projects/qatdavbt--run/backend/spec/profilePhotoSpec.js:34:39)]]>
+   </failure>
+   <failure type="exception" message="TypeError: Cannot read properties of undefined (reading &apos;profilePhoto&apos;)"><![CDATA[at UserContext.eval (file:///home/projects/qatdavbt--run/backend/spec/profilePhotoSpec.js#cjs:35:35)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Profile Photo Update and Delete API" name="[REQ063]_delete_profile_photo_successfully" time="0.026">
+   <failure type="toBe" message="Expected 404 to be 200."><![CDATA[at <Jasmine>
+    at UserContext.eval (/home/projects/qatdavbt--run/backend/spec/profilePhotoSpec.js:47:33)]]>
+   </failure>
+   <failure type="toBe" message="Expected undefined to be true."><![CDATA[at <Jasmine>
+    at UserContext.eval (/home/projects/qatdavbt--run/backend/spec/profilePhotoSpec.js:48:39)]]>
+   </failure>
+   <failure type="toBe" message="Expected undefined to be &apos;Profile photo deleted successfully&apos;."><![CDATA[at <Jasmine>
+    at UserContext.eval (/home/projects/qatdavbt--run/backend/spec/profilePhotoSpec.js:49:39)]]>
+   </failure>
+  </testcase>
+ </testsuite>
+ <testsuite name="User API - Login" timestamp="2024-12-13T12:29:36" hostname="localhost" time="0.996" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ </testsuite>
+ <testsuite name="User API - Login.POST /api/users/login" timestamp="2024-12-13T12:29:36" hostname="localhost" time="0.996" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="User API - Login.POST /api/users/login" name="[REQ008]_fail_login_with_non_existent_email" time="0.053" />
+  <testcase classname="User API - Login.POST /api/users/login" name="[REQ007]_fail_login_with_incorrect_password" time="0.483" />
+  <testcase classname="User API - Login.POST /api/users/login" name="[REQ009]_login_successfully_with_correct_credentials" time="0.459" />
+ </testsuite>
+ <testsuite name="Post API" timestamp="2024-12-13T12:29:37" hostname="localhost" time="0.083" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ </testsuite>
+ <testsuite name="Post API.GET /api/posts/getAll" timestamp="2024-12-13T12:29:37" hostname="localhost" time="0.076" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Post API.GET /api/posts/getAll" name="[REQ027]_fetch_no_posts" time="0.039" />
+  <testcase classname="Post API.GET /api/posts/getAll" name="[REQ026]_fetch_all_posts_successfully" time="0.036" />
+ </testsuite>
+ <testsuite name="Post API" timestamp="2024-12-13T12:29:37" hostname="localhost" time="0.135" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ </testsuite>
+ <testsuite name="Post API.POST /api/posts/create" timestamp="2024-12-13T12:29:37" hostname="localhost" time="0.132" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="Post API.POST /api/posts/create" name="[REQ025]_not_create_post_with_invalid_token" time="0.016" />
+  <testcase classname="Post API.POST /api/posts/create" name="[REQ024]_not_create_post_with_missing_required_fields" time="0.049" />
+  <testcase classname="Post API.POST /api/posts/create" name="[REQ023]_create_new_post_successfully" time="0.065" />
+ </testsuite>
+ <testsuite name="Comment API" timestamp="2024-12-13T12:29:37" hostname="localhost" time="0.151" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ </testsuite>
+ <testsuite name="Comment API.POST /api/posts/addComments" timestamp="2024-12-13T12:29:37" hostname="localhost" time="0.096" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Comment API.POST /api/posts/addComments" name="[REQ043]_add_comment_successfully" time="0.075" />
+  <testcase classname="Comment API.POST /api/posts/addComments" name="[REQ044]_add_comment_with_invalid_token" time="0.021" />
+ </testsuite>
+ <testsuite name="Comment API.GET /api/posts/getComments/:postId" timestamp="2024-12-13T12:29:37" hostname="localhost" time="0.047" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Comment API.GET /api/posts/getComments/:postId" name="[REQ046]_fetch_comments_for_invalid_postId" time="0.017" />
+  <testcase classname="Comment API.GET /api/posts/getComments/:postId" name="[REQ045]_fetch_comments_successfully" time="0.029" />
+ </testsuite>
+ <testsuite name="Like/Unlike API" timestamp="2024-12-13T12:29:38" hostname="localhost" time="0.283" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ </testsuite>
+ <testsuite name="Like/Unlike API.POST /api/posts/like" timestamp="2024-12-13T12:29:38" hostname="localhost" time="0.122" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Like/Unlike API.POST /api/posts/like" name="[REQ038]_like_post_with_invalid_token" time="0.024" />
+  <testcase classname="Like/Unlike API.POST /api/posts/like" name="[REQ037]_like_post_successfully" time="0.097" />
+ </testsuite>
+ <testsuite name="Like/Unlike API.POST /api/posts/unlike" timestamp="2024-12-13T12:29:38" hostname="localhost" time="0.153" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Like/Unlike API.POST /api/posts/unlike" name="[REQ039]_unlike_post_successfully" time="0.124" />
+  <testcase classname="Like/Unlike API.POST /api/posts/unlike" name="[REQ040]_unlike_post_with_invalid_token" time="0.029" />
+ </testsuite>
+ <testsuite name="Delete Post API" timestamp="2024-12-13T12:29:38" hostname="localhost" time="0.297" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ </testsuite>
+ <testsuite name="Delete Post API.DELETE /api/posts/delete/:postId" timestamp="2024-12-13T12:29:38" hostname="localhost" time="0.291" errors="0" tests="4" skipped="0" disabled="0" failures="0">
+  <testcase classname="Delete Post API.DELETE /api/posts/delete/:postId" name="[REQ051]_delete_post_successfully" time="0.107" />
+  <testcase classname="Delete Post API.DELETE /api/posts/delete/:postId" name="[REQ052]_not_delete_post_with_invalid_token" time="0.052" />
+  <testcase classname="Delete Post API.DELETE /api/posts/delete/:postId" name="[REQ053]_not_delete_post_if_not_owner" time="0.066" />
+  <testcase classname="Delete Post API.DELETE /api/posts/delete/:postId" name="[REQ054]_not_delete_non_existing_post" time="0.066" />
+ </testsuite>
+ <testsuite name="Profile and Follow/Unfollow API" timestamp="2024-12-13T12:29:38" hostname="localhost" time="0.311" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ </testsuite>
+ <testsuite name="Profile and Follow/Unfollow API.POST /api/users/unfollow" timestamp="2024-12-13T12:29:38" hostname="localhost" time="0.168" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="Profile and Follow/Unfollow API.POST /api/users/unfollow" name="[REQ061]_unfollow_user_successfully" time="0.168" />
+ </testsuite>
+ <testsuite name="Profile and Follow/Unfollow API.GET /api/users/profile/:username" timestamp="2024-12-13T12:29:38" hostname="localhost" time="0.049" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Profile and Follow/Unfollow API.GET /api/users/profile/:username" name="[REQ059]_fetch_non_existing_user_profile" time="0.029" />
+  <testcase classname="Profile and Follow/Unfollow API.GET /api/users/profile/:username" name="[REQ058]_fetch_user_profile_by_username_successfully" time="0.019" />
+ </testsuite>
+ <testsuite name="Profile and Follow/Unfollow API.POST /api/users/follow" timestamp="2024-12-13T12:29:38" hostname="localhost" time="0.079" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="Profile and Follow/Unfollow API.POST /api/users/follow" name="[REQ060]_follow_user_successfully" time="0.079" />
+ </testsuite>
+</testsuites>
